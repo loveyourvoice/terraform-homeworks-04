@@ -11,29 +11,37 @@
 
 # Задание 3
 ## Задание 3.1
-`module.test-vm.data.yandex_compute_image.my_image
+```bash
+module.test-vm.data.yandex_compute_image.my_image
 module.test-vm.yandex_compute_instance.vm[0]
 module.vpc_dev.yandex_vpc_network.module_network
-module.vpc_dev.yandex_vpc_subnet.module_subnet`
+module.vpc_dev.yandex_vpc_subnet.module_subnet
+```
 
 ## Задание 3.2
-`terraform state rm module.vpc_dev
+```bash
+terraform state rm module.vpc_dev
 Removed module.vpc_dev.yandex_vpc_network.module_network
 Removed module.vpc_dev.yandex_vpc_subnet.module_subnet
-Successfully removed 2 resource instance(s).`
+Successfully removed 2 resource instance(s).
+```
 
 ## Задание 3.3
-`terraform state rm module.test-vm
+```bash
+terraform state rm module.test-vm
 Removed module.test-vm.data.yandex_compute_image.my_image
 Removed module.test-vm.yandex_compute_instance.vm[0]
-Successfully removed 2 resource instance(s).`
+Successfully removed 2 resource instance(s).
+```
 
 ## Задание 3.4
-`terraform plan
+```bash
+terraform plan
 module.test-vm.data.yandex_compute_image.my_image: Reading...
 module.vpc_dev.yandex_vpc_network.module_network: Refreshing state... [id=enpj8f87kie0v6v3ktls]
 module.test-vm.data.yandex_compute_image.my_image: Read complete after 1s [id=fd81n0sfjm6d5nq6l05g]
 module.vpc_dev.yandex_vpc_subnet.module_subnet: Refreshing state... [id=e9bhiffv78465epqtmnq]
 module.test-vm.yandex_compute_instance.vm[0]: Refreshing state... [id=fhm7pvrmn0b0v5kb0hd2]
 
-No changes. Your infrastructure matches the configuration.`
+No changes. Your infrastructure matches the configuration.
+```
